@@ -2,9 +2,6 @@ pipeline {
 	agent any
 	stages {
 		stage("build") {
-			when {
-				branch 'master'
-			}
 			steps {
 				echo 'build'
 				sh '''
@@ -13,9 +10,6 @@ pipeline {
 			}
 		}
 		stage("test") {
-			when {
-				branch 'master'
-			}
 			steps {
 				echo 'test'
 				sh '''
@@ -24,9 +18,6 @@ pipeline {
 			}
 		}
 		stage("deploy") {
-			when {
-				branch 'master'
-			}
 			steps {
 				echo 'deploy'
 				sh '''
