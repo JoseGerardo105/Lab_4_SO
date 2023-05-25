@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  Suma:
+  suma:
     container_name: suma
     build:
       dockerfile: Dockerfile
