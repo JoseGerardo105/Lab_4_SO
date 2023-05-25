@@ -7,3 +7,17 @@ services:
       context: ./microservicios/suma
     ports:
       - '8090:8080'
+      
+  sumatest:
+    container_name: sumatest
+    build:
+      dockerfile: Dockerfile.test
+      context: ./microservicios/suma
+
+  sitioweb:
+    container_name: sitioweb
+    build:
+      dockerfile: Dockerfile
+      context: ./sitio
+    ports:
+      - '8081:80'
