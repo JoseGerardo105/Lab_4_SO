@@ -14,7 +14,7 @@ pipeline {
 				echo 'test'
 				sh '''
 					docker-compose up --force-recreate --exit-code-from sumatest sumatest
-					docker-compose up --force-recreate --exit-code-from sumatest bibliotecatest
+					docker-compose up --force-recreate --exit-code-from bibliotecatest bibliotecatest
 				'''
 			}
 		}
