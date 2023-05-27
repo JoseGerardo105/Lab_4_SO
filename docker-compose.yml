@@ -20,7 +20,7 @@ services:
     container_name: bibliotecatest
     build:
       dockerfile: Dockerfile.test
-      context: ./microservicios/test
+      context: ./microservicios/biblioteca
       
   sumatest:
     container_name: sumatest
