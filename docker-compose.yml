@@ -7,6 +7,20 @@ services:
       context: ./microservicios/suma
     ports:
       - '8090:8080'
+
+  biblioteca:
+    container_name: biblioteca
+    build:
+      dockerfile: Dockerfile
+      context: ./microservicios/biblioteca
+    ports:
+      - '8091:8080'
+  
+  bibliotecatest:
+    container_name: bibliotecatest
+    build:
+      dockerfile: Dockerfile.test
+      context: ./microservicios/test
       
   sumatest:
     container_name: sumatest

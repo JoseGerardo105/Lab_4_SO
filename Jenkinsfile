@@ -14,6 +14,7 @@ pipeline {
 				echo 'test'
 				sh '''
 					docker-compose up --force-recreate --exit-code-from sumatest sumatest
+					docker-compose up --force-recreate --exit-code-from sumatest bibliotecatest
 				'''
 			}
 		}
@@ -21,6 +22,7 @@ pipeline {
 			steps {
 				echo 'deploy'
 				sh '''
+					docker-compose up -d --force-recreate biblioteca
 					docker-compose up -d --force-recreate suma
 					docker-compose up -d --force-recreate sitioweb
 				'''
